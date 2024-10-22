@@ -19,12 +19,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 2rem;
     gap: 4rem;
   }
 
   div {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 2rem;
   }
 </style>
