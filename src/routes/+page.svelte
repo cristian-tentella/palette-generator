@@ -25,7 +25,9 @@
     <PaletteOptions />
     <SwatchOptions />
     <AddSwatch />
-    <button onclick={() => swatchesOptions.sort((a, b) => a.hue - b.hue)}>Sort</button>
+    <button onclick={() => swatchesOptions.sort((a, b) => a.hue - b.hue)}>Sort by hue</button>
+    <button onclick={() => swatchesOptions.sort((a, b) => a.chroma - b.chroma)}>Sort by chroma</button>
+    <button onclick={() => swatchesOptions.splice(0, swatchesOptions.length)}>Clear palette</button>
   </div>
   <div id="palette">
     <Palette />

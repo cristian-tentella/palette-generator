@@ -3,7 +3,7 @@
   import { makeSwatch } from "$lib/domain/palette/utils";
   import { options } from "$lib/state/options.svelte";
   import { swatchesOptions } from "$lib/state/swatchesOptions.svelte";
-  import Swatch from "./Swatch.svelte";
+  import EditableSwatch from "../interaction/EditableSwatch.svelte";
   
   let palette: Palette = $derived(swatchesOptions.map(
     it => {
@@ -22,8 +22,8 @@
 
 <div id="container">
   <div id="palette">
-    {#each palette as swatch}
-      <Swatch {swatch} />
+    {#each palette as swatch, index}
+      <EditableSwatch {index} {swatch} />
     {/each}
   </div>
 </div>
